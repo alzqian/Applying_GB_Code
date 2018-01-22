@@ -9,9 +9,11 @@ mdb_path = utils.to_unicode(
 gdb_path = utils.to_unicode(
     'D:/Qian/Coding/Python/Applying_GB_Code/res/基础测绘培训数据/GDB'.replace('/', os.sep))
 root_path = mdb_path
-for roots, dirs, files in os.walk(root_path):
-    for f in files:
-        env.workspace = os.path.join(root_path, f)
-        tables = arcpy.ListTables()
-        print env.workspace + ':  ' + str(tables)
+env.workspace = root_path
+for pgdb in arcpy.ListWorkspaces():
+    env.workspace = os.path.join(root_path, pgdb)
+    print '------' + env.workspace + '------'
+    for fc in arcpy.ListFeatureClasses():
+        print fc
+    print '================================='
 print 'DONE'
