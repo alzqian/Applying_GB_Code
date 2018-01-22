@@ -1,1 +1,1 @@
-from my_modules import utils
+import my_modules.utils
