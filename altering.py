@@ -2,7 +2,7 @@ import os
 import time
 import arcpy
 from arcpy import env
-import my_modules.utils as utils
+from my_package import utils
 
 print 'GO'
 mdb_path = utils.to_unicode(

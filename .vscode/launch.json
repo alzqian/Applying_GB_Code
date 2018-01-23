@@ -19,6 +19,20 @@
             ]
         },
         {
+            "name": "Run read_xls.py",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${workspaceFolder}/read_xls.py",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+                "RedirectOutput"
+            ]
+        },
+        {
             "name": "Python",
             "type": "python",
             "request": "launch",
